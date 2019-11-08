@@ -7,7 +7,7 @@ $db_database = 'user_sqlinj';
 
 $connect = @mysqli_connect($db_host, $db_username, $db_password, $db_database) or die('Connection Error:' . mysqli_connect_error());
 
-$query = "SELECT * FROM UserDetails WHERE UserID = '" . $_POST[form_username] . "' AND Password = '" . $_POST[form_password] . "'";
+$query = "SELECT * FROM UserDetails WHERE UserID = '" . mysqli_real_escape_string($_POST[form_username]) . "' AND Password = '" . mysqli_real_escape_string($_POST[form_password]) . "'";
 
 $result = @mysqli_query($connect, $query);
 ?>
@@ -55,7 +55,7 @@ $result = @mysqli_query($connect, $query);
             ?>
         </table>
 
-        <a style="color:blue"  href="Login.html"> LOGOUT </a>
+        <a style="color:blue" href="Login.html"> LOGOUT </a>
         </div>
     </body>
 </html>     

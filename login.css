@@ -71,7 +71,7 @@
         
     }
     
-    .submit{
+    .submit, .a {
       cursor: pointer;
         border-radius: 5em;
         color: #fff;
