@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="E:\Aditya\PROJECTS\IT SEC_SQL INJECTION DEMO\login.css">
+  <link rel="stylesheet" href="htdocs\IT SEC_SQL INJECTION DEMO\login.css">
   <title>Sign in</title>
 </head>
 
@@ -12,11 +12,12 @@
 
     <div class="main">
         <p class="sign" align="center">Sign in</p>
-        <form class="form1">
-            <input class="un " type="text" align="center" placeholder="Username">
-            <input class="pass" type="password" align="center" placeholder="Password">
-            <a class="submit" align="center">Sign in</a>
-        </form>
+        <form class="form1" action="sqlinjection.php" autocomplete="off" method="POST">
+
+            <input class="un" id="form_username" name="form_username" class="username" required="required" type="text" align="center" placeholder="Username">
+            <input class="pass" id="form_password" name="form_password" class="password" required="required" type="password" align="center" placeholder="Password">
+            
+            <input class="submit" type="submit" value="Login" align="center" />
     </div>
      
 </body>
